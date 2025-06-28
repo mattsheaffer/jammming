@@ -1,9 +1,14 @@
 import React from 'react';
+import Tracklist from './Tracklist';
 
-export default function Playlist() {
+export default function Playlist(props) {
     return (
         <>
-            <div>[Playlist]</div>
+            <h2>PlayList</h2>
+            <Tracklist 
+                tracks={props.playlistTracks} 
+                onRemove={props.onRemove}
+            />
         </>
     );
 }
